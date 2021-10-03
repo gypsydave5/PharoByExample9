@@ -243,6 +243,10 @@ If you want to evaluate an expression, you do not always have to right click. In
 
 Depending on your platform, you may have to press one of the modifier keys which are Control, Alt, and Command. We will use ==Cmd== in the rest of the book, so each time you see something like ==Cmd-D==, just replace it with the appropriate modifier key depending on your operating system. The corresponding modifier key in Windows is ==Ctrl==, and in Linux it is either ==Alt== or ==Ctrl==.
 
+!!!!Note
+
+In Pharo some key combinations require you to hold down a modifier key and press two other keys consecutively. For instance, to open the Playground you must hold the ==Cmd== key, and then press ==O== and ''then'' ==W==, all the while holding down the ==Cmd== key. Pressing ==Cmd-O==, releasing all the keys, and the pressing ==Cmd-W== will not have the same effect. We'll write these key combinations with a comma after the first additional key. So the previous shortcut will be written ==Cmd-O,W==
+
 In addition to ""Do it"", you might have noticed ""Do it and go"", ""Print it"", ""Inspect it"" and several other options in the context menu. Let's have a quick look at each of these.
 
 !!!Doing vs. printing
@@ -310,7 +314,7 @@ In Pharo, the default System Browser is Calypso. However, as we have mentioned, 
 
 There are ways to get to the class or method you're looking for in Pharo fast - very fast indeed. Later on we'll introduce you to ""Spotter"", one of the quickest ways to find an object in Pharo. But for now, while we're still learning, let's try taking the slow road by only using the System Browser to find the ==printString== method defined in the class ==Object==. At the end of the navigation, we will get the situation depicted in *@fig:systemBrowser2*:
 
--""Open the Browser"": Either by using the World Menu or the shortcut ==Cmd-O Cmd-W==. When a new System Browser window first opens, all panes but the leftmost are empty. This first pane lists all known ""packages"", which contain groups of related classes.
+-""Open the Browser"": Either by using the World Menu or the shortcut ==Cmd-O,B==. When a new System Browser window first opens, all panes but the leftmost are empty. This first pane lists all known ""packages"", which contain groups of related classes.
 -""Filter packages"": Type part of the name of the package in the left most filter. It filters the list of packages to be shown in the list above it. Type 'Kern' for example.
 -""Expand the ==Kernel== package and select the ==Object== element"": When we select a package, it causes the second pane to show a list of all of the ""classes"" in the selected package. You should see the class hierarchy of ==ProtoObject==.
 -""Select the ==Object== class"": When a class is selected, the remaining two panes will be populated. The third pane displays the ""protocols"" of the currently selected class. These are convenient groupings of related methods which we'll discuss further later in the book. If no protocol is selected you should see all methods in the fourth pane.
